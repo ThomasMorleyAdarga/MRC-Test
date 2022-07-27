@@ -14,7 +14,7 @@ from model_evaluate import model_evaluation
 
 def load_model(model_path, device):
     model = BertForQuestionAnswering.from_pretrained(model_path).to(device)
-    tokenizer_dir = 'bert-large-cased-whole-word-masking-finetuned-squad/vocab.txt'
+    tokenizer_dir = '../bert-large-cased-whole-word-masking-finetuned-squad/vocab.txt'
     tokenizer = BertTokenizer.from_pretrained(tokenizer_dir, do_lower_case=False)
     return tokenizer, model
 
@@ -33,7 +33,7 @@ def train_portion(ace_ontology, data_ace, ratio):
     os.environ['CUDA_VISIBLE_DEVICES'] = '1'
     #device = 'cuda'
     device = 'cpu'
-    tokenizer, model = load_model('bert-large-cased-whole-word-masking-finetuned-squad', device)
+    tokenizer, model = load_model('../bert-large-cased-whole-word-masking-finetuned-squad', device)
     # tokenizer, model = load_model('/home/jliu/data/BertModel/bert-large-cased', device)
 
     cut_idx = int(len(data_ace['train']) * ratio)

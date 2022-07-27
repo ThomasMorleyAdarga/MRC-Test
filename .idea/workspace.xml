@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e376fe0-8608-4a6b-835c-b139fa961fc9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/QuestionGeneration/XLM/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QuestionGeneration/XLM/tools/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestionAnswering/model_train_progressly.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuestionAnswering/model_train_progressly.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestionAnswering/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuestionAnswering/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestionGeneration/data_preparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuestionGeneration/data_preparation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuestionGeneration/XLM" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
