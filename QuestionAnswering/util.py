@@ -47,7 +47,6 @@ def transfer_data_format(ace_dataset):
         for event_id in events:
             event_arguments = events[event_id]
             trigger_s, trigger_t, event_type = _get_position(event_list, event_id)
-            print(trigger_s, trigger_t, event_type)
             #print(event_arguments)
             event_arguments_list = list()
             for argument in event_arguments:
@@ -147,14 +146,7 @@ def build_examples(event_ontology, event_data, training=True):
     results = []
     for data in event_data:
         event_type, _, text, related_entities, trigger_pos, argument_colection = data
-        print('event type: ', event_type)
-        print('_', _)
-        print('text: ', text)
-        print('related entities', related_entities)
-        print('trigger_pos', trigger_pos)
-        print('argument_colection', argument_colection)
         argument_set = event_ontology[event_type]
-        print('argument set: ', argument_set)
         for arg in argument_set:
             arg_pos = list()
             for elem in argument_colection:

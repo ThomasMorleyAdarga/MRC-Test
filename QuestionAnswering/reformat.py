@@ -24,7 +24,8 @@ def main(train, test, val, data):
 
     # Generate final examples
     for f in ['train', 'test', 'val']:
-        for example in og_dataset[f]:
+        for i, example in enumerate(og_dataset[f]):
+            print(i)
 
             # Unused variables set to none
             doc_id = None
@@ -59,8 +60,8 @@ def main(train, test, val, data):
             related_entities = {}
             for entity in example['golden-entity-mentions']:
 
-                text, entity_type, start, end = entity['text'], entity['entity-type'], entity['start'], entity['end']
-                related_entities.setdefault(text, list())
+                entity_text, entity_type, start, end = entity['text'], entity['entity-type'], entity['start'], entity['end']
+                related_entities.setdefault(entity_text, list())
                 entity_data = list()
 
 
@@ -79,6 +80,9 @@ def main(train, test, val, data):
                 entity_data.append(end)
 
                 related_entities[entity['text']] = entity_data
+                
+            
+            print([ doc_id, text, entity_head_list, ner_total_list, event_list, events, pos, related_entities])
 
             final_output[f].append([ doc_id, text, entity_head_list, ner_total_list, event_list, events, pos, related_entities])
 

@@ -96,7 +96,7 @@ if __name__ == '__main__':
     # # dump data
     #data_framenet = pickle.load(open('../data/data_framenet.pickle', 'rb'))
     #data_ace = pickle.load(open('../data/data_ace.pickle', 'rb'))
-    with open('data', 'r') as f:
+    with open('dataset', 'r') as f:
         data_ace = json.load(f)
 
     for f in ['train', 'test', 'val']: 
