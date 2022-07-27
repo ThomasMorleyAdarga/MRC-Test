@@ -17,6 +17,7 @@
 To get the model to acc work do:
 
 1. Open Jupiter notebook inside of QuestionGeneration
+
 Execute this:	
 `%run data_generation.py`
 
